@@ -1,0 +1,133 @@
+main h2{
+    margin: 1em 2vw;
+    padding: 1em;
+    background-color: var(--primary-color);
+    border-radius: 20px;
+    color: white;
+    width: calc(100vw - 4vw);
+}
+
+.text-bar{
+    margin: 1em 2vw;
+    width: calc(100vw - 4vw);
+}
+
+.grid_portrait{
+    margin: 1em 2vw;
+    padding: 1em;
+    width: 96vw;
+    height: fit-content;
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: 1fr 11fr;
+    justify-content: center;
+    background-color: var(--primary-color);
+}
+
+.grid_portrait h2{
+    background-color: transparent;
+    margin: 0;
+    padding: 0.5em 0;
+    height: 100%;
+    width: 1em;
+    writing-mode: sideways-lr;
+    text-wrap: nowrap;
+    transform: translateX(-0.2em);
+
+}
+
+.grid_portrait img{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+
+
+}
+
+.info,
+.apps{
+    margin: 1em 1vw;
+    padding: 1em;
+}   
+
+.info p,
+.apps p{
+    color: gray;
+}   
+
+.info h3{
+    color: var(--secondary-color);
+    font-size: 2em;
+    font-weight: 700;
+} 
+
+.apps div{
+    width: calc(100% - 2vw);
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 1em 0;
+    gap: 20px;
+}
+
+.apps img{
+    padding: 0;
+    margin: 0;
+    width: 100px;
+    height: auto;
+    border-radius: 0;
+}
+
+section{
+    padding: 0;
+    margin-bottom: 80px;
+}
+
+section div{
+    margin: 0;
+}
+
+section p{
+    margin: 0 4vw;
+    width: calc(100% - 16vw);
+    max-width: 65ch;
+    line-height: 1.5em;
+    margin-left: 4vw;
+}
+
+section p:not(.text){
+color: gray;
+}
+
+.text{
+    margin-left: 7vw;
+
+}
+
+.jobs,
+.kursus{
+    margin: 1em 0 5em 0;
+}
+
+.jobs h3:first-child,
+.kursus h3:first-child{
+    width: fit-content;
+    padding: 0.1em 0.5em;
+    color: var(--primary-color);
+    margin-bottom: 0.2em;
+}
+
+.info_h{
+    background-color: transparent;
+    border-radius: 0;
+    padding: 0;
+    margin: 0 0 0.2em 4vw;
+    width: calc(100% - 8vw);
+    color: var(--secondary-color);
+}
+
+h3{
+    margin: 0 0 1em 4vw;
+    width: calc(100% - 8vw); 
+}

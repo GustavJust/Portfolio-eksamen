@@ -1,0 +1,489 @@
+/* ***************************
+Colors and fonts
+*************************** */
+
+html{
+    background-color: var(--secondary-color);
+
+    --sec-1-color:#FFC1AE;
+    --sec-2-color:#ffd4a6;
+    --sec-3-color:#D5D5D5;
+    --sec-4-color:#DDCAE2;
+
+    --sec-1-txt: #EB4D1B;
+    --sec-2-txt: #ba6a14;
+    --sec-3-txt: #575757;
+    --sec-4-txt: #BE67D5;
+}
+
+@font-face {
+    font-family: 'rusty-hooks';
+    src: url('../assets/fonts/rustyhooks.woff2') format('woff2');
+
+}
+
+/* ***************************
+Typography
+*************************** */
+
+.rusty{
+    font-family: 'rusty-hooks';
+}
+
+.text_var2{
+    font-size: 1.2em;
+}
+
+code{
+    color: var(--primary-color);
+    background-color: lightgray;
+    border-radius: 0.2em;
+    padding: 0 0.2em;
+}
+
+/* ***************************
+Nav logo og farver
+*************************** */
+
+nav a,
+nav p{
+    color: white;
+}
+
+.logo{
+    color: var(--secondary-color);
+    background-color: white;
+    border-color: white;
+}
+
+/* ***************************
+grids & flex
+*************************** */
+
+.grid_1{
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+    height: 100%;
+}
+
+.grid_1-1{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    padding: 0;
+}
+
+.grid_1-1 div{
+height: fit-content;
+padding: 0;
+}
+
+.grid_1-1-1{
+    display: grid;
+    grid-template-columns: 1fr 2fr  2fr;
+}
+
+.flex{
+    display: flex;
+    gap: 0.5em;
+    align-items: flex-end;
+    padding: 0;
+
+}
+
+/* ***************************
+Section global
+*************************** */
+
+.block{
+    display: flex;
+    flex-direction: row;
+    border-radius: 20px;
+    width: calc(100vw - 4vw);
+    gap: 0.5em;
+    overflow: hidden;
+}
+
+.nmbr{
+    height: fit-content;
+    position: relative;
+    padding: 0.5em;
+    top: 0.2em;
+    text-align: center;
+}
+
+.block_elmt{
+    padding: 1em 1em;
+    margin: 0;
+}
+
+.block div div{
+    margin: 0;
+}
+
+section .knap2{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: left;
+    padding: 0.2em 1em;
+    border-radius: 20px;
+    height: fit-content;
+    width: fit-content;
+    background-color: white;
+    align-items: center;
+    margin-top: 1em;
+}
+
+section svg:not(.knap1 svg){
+    position: relative;
+    transform: scale(0.6) rotate(45deg);
+    left: 10%;
+
+}
+
+section h2{
+    font-size: 1.3em;
+    padding: 0;
+    margin: 0;
+    color: var(--secondary-color);
+    font-weight: 1000;
+}
+
+.block.txt{
+    background-color: white !important; 
+}
+
+.block.txt .block_elmt p{
+    margin: 1em 0;
+    line-height: 1.5em;
+}
+
+section div:has(img){
+    padding: 0;
+    margin-bottom: -5px;
+}
+
+section:last-child{
+    margin-bottom: 20px;
+}
+
+/* ***************************
+Section local
+*************************** */
+
+/* sec 1 */
+
+.sec_1 .block{
+    background-color: var(--sec-1-color);
+}
+
+.sec_1 h3{
+    color: var(--sec-1-txt);
+}
+
+.sec_1 a{
+    color: var(--primary-color);
+}
+
+.sec_1 svg path{
+    stroke: var(--primary-color);
+}
+
+.sec_1 .block .nmbr{
+    color: var(--sec-1-txt);
+}
+
+.sec_1 .block.txt .nmbr{
+    background-color: var(--sec-1-color);
+    color: white;
+    border-radius: 20px;
+}
+
+/* sec 2 */
+
+.sec_2 .block .block_elmt .grid_1-1 svg{
+    transform: scale(0.9) rotate(0deg);
+    top: 0%;
+    left: 70%;
+}
+
+.sec_2 .block.player{
+    height: 105px;
+}
+
+.block.player div div svg path{
+    fill: var(--primary-color);
+}
+
+.block.player div div svg circle{
+    fill: white;
+}
+
+.sec_2 .block{
+    background-color: var(--sec-2-color);
+}
+
+.sec_2 h3{
+    color: var(--sec-2-txt);
+}
+
+.sec_2 .block .nmbr{
+    color: var(--sec-2-txt);
+}
+
+.sec_2 .block.txt .nmbr{
+    background-color: var(--sec-2-color);
+    color: white;
+    border-radius: 20px;
+}
+
+/* sec 3 */
+
+.sec_3 .block{
+    background-color: var(--sec-3-color);
+}
+
+.sec_3 h3{
+    color: var(--sec-3-txt);
+}
+
+.sec_3 .block .nmbr{
+    color: var(--sec-3-txt);
+}
+
+.sec_3 .block.txt .nmbr{
+    background-color: var(--sec-3-color);
+    color: white;
+    border-radius: 20px;
+}
+
+/* sec 4 */
+
+.sec_4 .block{
+    background-color: var(--sec-4-color);
+}
+
+.sec_4 h3{
+    color: var(--sec-4-txt);
+}
+
+.sec_4 .block .nmbr{
+    color: var(--sec-4-txt);
+}
+
+.sec_4 .block.txt .nmbr{
+    background-color: var(--sec-4-color);
+    color: white;
+    border-radius: 20px;
+}
+
+.text_usercard ul li{
+    font-family: var(--tertiary-font);
+    margin-left: 1.5em;
+    padding: 0.2em 0;
+
+}
+
+/* ***************************
+Site local
+*************************** */
+
+.brainstorm{
+align-items: center;
+margin-top: 0.5em !important;
+}
+
+.brainstorm img{
+    grid-area: 1/1/1/1;
+    width: 110%;
+    height: 100%;
+    object-fit: cover;
+    text-align: center;
+}
+
+.brainstorm h3{
+    grid-area: 1/1/1/1;
+    width: fit-content;
+    height: fit-content;
+    object-fit: cover;
+    text-align: center;
+    transform: translateX( calc(50vw - 50% - 16px - 2vw) );
+}
+
+.grid_1-1.usercard{
+    margin-top: 1em;
+    width: 110%;
+    height: fit-content;
+    border:2px dotted var(--sec-2-txt);
+    grid-template-columns: 1.1fr 8fr;
+    border-radius: 20px;
+    overflow:hidden;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.grid_1-1.usercard p{
+    height: fit-content;
+    width: 90%;
+    padding: 0.5em 0;
+}
+
+.grid_1-1.usercard div{
+    width: 100%;
+    height: 100%;
+    background-color: var(--primary-color);
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.text_usercard{
+    display: flex;
+    background-color: white !important;
+}
+
+.grid_1-1.usercard div:first-of-type p{
+    height: 22vw;
+    width: 100%;
+    height: fit-content;
+    text-align: center;
+    color: white;
+    background-color: transparent;
+
+}
+
+.block_elmt dl dt{
+    font-family: var(--primary-font);
+    font-weight: 1000;
+    margin-bottom: 0.5em;
+    color: var(--sec-2-txt);
+    border-radius: 20px;
+}
+
+.block_elmt dl dd{
+    font-family: var(--tertiary-font);
+    margin-bottom: 2em;
+
+}
+
+.grid_1-1.block_sound div{
+    margin-top: 20px;
+}
+
+.grid_1-1.block_sound div:nth-child(odd){
+display: flex;
+align-items: center;
+height: 100%;
+}
+
+.grid_1-1.block_sound div:nth-child(odd) h2{
+    height: fit-content;
+}
+
+.grid_1-1.block_sound div:nth-child(even){
+    background-color: white;
+    border-radius: 20px;
+    padding: 1em;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+
+.grid_1-1.block_sound div svg{
+    left: 0 !important;
+    margin: 1em 0;
+}
+
+.grid_1-1.block_sound div svg circle{
+    fill: var(--primary-color);
+}
+
+.grid_1-1.block_sound div svg path{
+    fill: white;
+}
+
+.kode h3{
+text-align: left;
+transform: translatex(1em);
+margin: 0.5em 0 0.2em 0;
+}
+
+a.knap2.virk svg{
+    left:0;
+}
+
+.flex.colors{
+    margin: 1em 0;
+}
+
+.flex.colors div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.color_display{
+    gap: 20px;
+    width: 15vw;
+    border-radius: 20px;
+    aspect-ratio: 1/1;
+    margin-bottom: 0.5em !important;
+
+}
+
+.a_virk{
+    background-color: #F3F3E0;
+}
+
+.b_virk{
+    background-color: #133E87;
+}
+
+.c_virk{
+    background-color: #608BC1;
+}
+
+.d_virk{
+    background-color: #CBDCEB;
+}
+
+
+/* ***************************
+Font display
+*************************** */
+
+
+.font_display{
+    padding: 0.5em 0;
+    font-size: 2em;
+    width: 100%;
+    word-break: break-all;
+    text-wrap: wrap;
+    line-height: 1.5em;
+    background-color: white;
+    border-radius: 20px;
+    margin-top:0.5em !important;
+}
+
+.font_display p{
+    width: calc(100% - 2em);
+    text-wrap: wrap;
+    margin: 0.5em 1em;
+}
+
+section:last-of-type{
+    margin: 2em 0 3em 0;
+}
+
+/* ***************************
+Nav cards
+*************************** */
+
+section:nth-of-type(5) h2{
+    margin: 2em 1em 1em 1em;
+    color: white;
+}
